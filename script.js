@@ -1,4 +1,4 @@
-const movies=[];
+const movies=[{id:"m01",title:"Doorbeen",year:"2019",genre:"Comedy",rating:"5.9",duration:"2h 4m",channel:"Yellow Music",poster:"https://i.ytimg.com/vi/o1V4vJ1kvt8/maxresdefault.jpg",desc:"A charming Punjabi comedy-drama filled with village life, friendship, romance and clever twists.",youtube:"https://www.youtube.com/watch?v=ld2xZyqd25Y"}];
 
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const favs=()=>JSON.parse(localStorage.getItem("virsa-favorites")||"[]");
