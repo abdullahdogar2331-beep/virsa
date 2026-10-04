@@ -13,14 +13,15 @@ function card(m){const on=favs().includes(m.id);return `<article class="card"><d
 
 function render(id,list){$(id).innerHTML=list.map(card).join("");bindCards($(id))}
 function bindCards(root=document){root.querySelectorAll("[data-movie]").forEach(x=>x.onclick=()=>openMovie(x.dataset.movie));root.querySelectorAll("[data-fav]").forEach(x=>x.onclick=e=>{e.stopPropagation();let a=favs(),i=a.indexOf(x.dataset.fav);i>=0?a.splice(i,1):a.push(x.dataset.fav);saveFavs(a);refresh()})}
-function refresh(){render("#trending",movies.slice(1,4));render("#latest",movies.slice(2));render("#topRated",[...movies].sort((a,b)=>b.rating-a.rating));render("#drama",movies.filter(m=>m.genre==="Drama"));render("#comedy",movies.filter(m=>m.genre==="Comedy"));renderFavorites()}
+function refresh(){render("#trending",movies.slice(1,4));render("#latest",movies.slice(2));render("#topRated",[...movies].sort((a,b)=>b.rating-a.rating));render("#webSeries",movies.filter(m=>["Drama","Romance"].includes(m.genre)));render("#drama",movies.filter(m=>m.genre==="Drama"));render("#comedy",movies.filter(m=>m.genre==="Comedy"));renderFavorites()}
 function renderFavorites(){const list=movies.filter(m=>favs().includes(m.id));$("#favoriteGrid").innerHTML=list.length?list.map(card).join(""):'<div class="empty">Your collection is empty. Tap ♡ on a movie to save it here.</div>';bindCards($("#favoriteGrid"))}
 
 function openMovie(id){const m=movies.find(x=>x.id===id);if(!m)return;$("#modalPoster").src=m.poster;$("#modalPoster").alt=m.title;$("#modalTitle").textContent=m.title;$("#modalGenre").textContent=m.genre.toUpperCase();$("#modalMeta").textContent=`${m.year}  •  ${m.duration}  •  ★ ${m.rating}`;$("#modalDesc").textContent=m.desc;const b=$("#watchBtn");b.href=m.youtube||"#";b.style.opacity=m.youtube?"1":".45";b.style.pointerEvents=m.youtube?"auto":"none";$("#saveBtn").textContent=favs().includes(id)?"♥ Saved":"♡ Save";$("#saveBtn").dataset.id=id;$("#movieModal").classList.add("open")}
 
 $("#modalClose").onclick=()=>$("#movieModal").classList.remove("open");
 $("#movieModal").onclick=e=>{if(e.target.id==="movieModal")$("#movieModal").classList.remove("open")};
-$("#saveBtn").onclick=()=>{const id=$("#saveBtn").dataset.id;let a=favs(),i=a.indexOf(id);i>=0?a.splice(i,1):a.push(id);saveFavs(a);refresh();$("#saveBtn").textContent=favs().includes(id)?"♥ Saved":"♡ Save"};
+$("#saveBtn").onclick=()=>{const id=$("#saveBtn").dataset.id;let a=favs(),i=a.indexOf(id);i>=0?a.splice(i,1):a.push(id);saveFavs(a);window.addEventListener("scroll",()=>$("#nav").classList.toggle("scrolled",scrollY>25));
+refresh();$("#saveBtn").textContent=favs().includes(id)?"♥ Saved":"♡ Save"};
 
 function openSearch(){$("#searchOverlay").classList.add("open");$("#searchInput").focus();search("")}
 $("#searchOpen").onclick=openSearch;
