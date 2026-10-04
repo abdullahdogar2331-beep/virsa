@@ -8,14 +8,20 @@
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "plugins": ["expo-router"],
+    "splash": {
+      "backgroundColor": "#09090A",
+      "resizeMode": "contain"
+    },
     "android": {
       "package": "com.abdullahdogar.virsa",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#0B0B0C"
       }
     },
     "ios": {
-      "bundleIdentifier": "com.abdullahdogar.virsa"
+      "bundleIdentifier": "com.abdullahdogar.virsa",
+      "supportsTablet": false
     },
     "experiments": {
       "typedRoutes": true
