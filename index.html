@@ -9,10 +9,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:"Space Grotesk",sans-serif;font-weight:800;letter-spacing:.08em}
+.logo-mark{width:34px;height:34px;display:grid;place-items:center;position:relative;border:1px solid rgba(255,255,255,.22);border-radius:10px;background:linear-gradient(145deg,#f23b3b,#a80707);box-shadow:0 8px 24px rgba(210,20,20,.28);color:#fff;overflow:hidden}
+.logo-mark:before{content:"";position:absolute;width:19px;height:19px;border:2px solid rgba(255,255,255,.92);border-radius:50%;top:-6px;right:-6px}
+.logo-mark span{position:relative;z-index:1;font-size:16px;line-height:1}
+.logo-word{font-size:20px;color:#fff}
+.hero-logo{font-family:"Space Grotesk",sans-serif;font-weight:800;letter-spacing:.18em;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.45)}
+.footer-brand .logo-word{font-size:18px}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
-  <a class="logo" href="#home"><span>V</span> VIRSA</a>
+  <a class="logo" href="#home" aria-label="VIRSA Home"><span class="logo-mark"><span>V</span></span><span class="logo-word">VIRSA</span></a>
   <nav class="main-nav">
     <a class="active" href="#home">Home</a><a href="#movies">Movies</a><a href="#webseries">Web Series</a><a href="#genres">Genres</a><a href="#favorites">My List</a>
   </nav>
@@ -40,108 +49,37 @@
   <div class="hero-badge"><b>VIRSA</b><span>Punjabi Cinema</span><small>Stories that feel like home.</small></div>
 </section>
 
-<section class="category-bar">
-  <div class="category-inner">
-    <button class="selected" data-scroll="#movies">All</button>
-    <button data-scroll="#trending">Trending</button>
-    <button data-scroll="#latest">New Releases</button>
-    <button data-scroll="#comedyHits">Comedy</button>
-    <button data-scroll="#romanceFamily">Romance</button>
-    <button data-scroll="#actionDrama">Action</button>
-    <button data-scroll="#webseries">Web Series</button>
-  </div>
-</section>
+<section class="category-bar"><div class="category-inner">
+<button class="selected" data-scroll="#movies">All</button><button data-scroll="#trending">Trending</button><button data-scroll="#latest">New Releases</button><button data-scroll="#comedyHits">Comedy</button><button data-scroll="#romanceFamily">Romance</button><button data-scroll="#actionDrama">Action</button><button data-scroll="#webseries">Web Series</button>
+</div></section>
 
 <section class="catalog" id="movies">
-  <div class="section-title"><div><span class="red-bar"></span><h2>Top OTT Content</h2></div><button class="view" data-search>View All <b>›</b></button></div>
-  <div class="rail" id="trending"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>New OTT Releases</h2></div><button class="view" data-search>View All <b>›</b></button></div>
-  <div class="rail" id="latest"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Top Punjabi Movies</h2></div></div>
-  <div class="rail" id="classics"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Best Comedy Punjabi Movies</h2></div></div>
-  <div class="rail" id="comedyHits"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Best Punjabi Romantic Movies</h2></div></div>
-  <div class="rail" id="romanceFamily"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Best Punjabi Action Movies</h2></div></div>
-  <div class="rail" id="actionDrama"></div>
-
-  <div class="section-title" id="webseries"><div><span class="red-bar"></span><h2>Top Punjabi Shows</h2></div></div>
-  <div class="rail" id="webSeries"></div>
-
-  <div class="section-title" id="genres"><div><span class="red-bar"></span><h2>Top Rated</h2></div></div>
-  <div class="rail" id="topRated"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Drama</h2></div></div>
-  <div class="rail" id="drama"></div>
-
-  <div class="section-title"><div><span class="red-bar"></span><h2>Comedy</h2></div></div>
-  <div class="rail" id="comedy"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Top OTT Content</h2></div><button class="view" data-search>View All <b>›</b></button></div><div class="rail" id="trending"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>New OTT Releases</h2></div><button class="view" data-search>View All <b>›</b></button></div><div class="rail" id="latest"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Top Punjabi Movies</h2></div></div><div class="rail" id="classics"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Best Comedy Punjabi Movies</h2></div></div><div class="rail" id="comedyHits"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Best Punjabi Romantic Movies</h2></div></div><div class="rail" id="romanceFamily"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Best Punjabi Action Movies</h2></div></div><div class="rail" id="actionDrama"></div>
+<div class="section-title" id="webseries"><div><span class="red-bar"></span><h2>Top Punjabi Shows</h2></div></div><div class="rail" id="webSeries"></div>
+<div class="section-title" id="genres"><div><span class="red-bar"></span><h2>Top Rated</h2></div></div><div class="rail" id="topRated"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Drama</h2></div></div><div class="rail" id="drama"></div>
+<div class="section-title"><div><span class="red-bar"></span><h2>Comedy</h2></div></div><div class="rail" id="comedy"></div>
 </section>
 
-<section class="premium-banner">
-  <div>
-    <small>WELCOME TO VIRSA</small>
-    <h2>Entertainment that<br><em>feels like home.</em></h2>
-    <p>One place for Punjabi movies, shows and stories.</p>
-  </div>
-  <button class="primary" data-search>Browse Library</button>
-</section>
-
-<section class="culture">
-  <div class="culture-copy">
-    <small>ROOTED IN PUNJAB</small>
-    <h2>Our language.<br><em>Our stories.</em></h2>
-    <p>VIRSA celebrates Punjabi cinema through a clean, modern OTT experience — from laugh-out-loud comedy to powerful drama and romance.</p>
-    <button class="ghost" data-scroll="#movies">Discover Movies</button>
-  </div>
-</section>
-
-<section class="favorites" id="favorites">
-  <div class="section-title"><div><span class="red-bar"></span><h2>My List</h2></div></div>
-  <div class="grid" id="favoriteGrid"></div>
-</section>
+<section class="premium-banner"><div><small>WELCOME TO VIRSA</small><h2>Entertainment that<br><em>feels like home.</em></h2><p>One place for Punjabi movies, shows and stories.</p></div><button class="primary" data-search>Browse Library</button></section>
+<section class="culture"><div class="culture-copy"><small>ROOTED IN PUNJAB</small><h2>Our language.<br><em>Our stories.</em></h2><p>VIRSA celebrates Punjabi cinema through a clean, modern OTT experience — from laugh-out-loud comedy to powerful drama and romance.</p><button class="ghost" data-scroll="#movies">Discover Movies</button></div></section>
+<section class="favorites" id="favorites"><div class="section-title"><div><span class="red-bar"></span><h2>My List</h2></div></div><div class="grid" id="favoriteGrid"></div></section>
 </main>
 
-<div class="search-overlay" id="searchOverlay">
-  <button class="close" id="searchClose">×</button>
-  <div class="search-box">
-    <small>SEARCH VIRSA</small>
-    <input id="searchInput" placeholder="Search movies, genres or years..." autocomplete="off">
-    <div class="chips" id="chips"></div>
-    <div class="grid" id="searchResults"></div>
-  </div>
-</div>
-
-<div class="modal" id="movieModal">
-  <button class="close" id="modalClose">×</button>
-  <div class="movie-panel">
-    <img id="modalPoster" alt="">
-    <div class="movie-copy">
-      <small id="modalGenre"></small>
-      <h2 id="modalTitle"></h2>
-      <div id="modalMeta" class="meta"></div>
-      <p id="modalDesc"></p>
-      <div class="actions">
-        <a id="watchBtn" class="primary" target="_blank" rel="noopener">▷ Watch Release</a>
-        <button id="saveBtn" class="save">♡ My List</button>
-      </div>
-      <small class="notice">VIRSA does not host movie files. Watch buttons open an external release page.</small>
-    </div>
-  </div>
-</div>
+<div class="search-overlay" id="searchOverlay"><button class="close" id="searchClose">×</button><div class="search-box"><small>SEARCH VIRSA</small><input id="searchInput" placeholder="Search movies, genres or years..." autocomplete="off"><div class="chips" id="chips"></div><div class="grid" id="searchResults"></div></div></div>
+<div class="modal" id="movieModal"><button class="close" id="modalClose">×</button><div class="movie-panel"><img id="modalPoster" alt=""><div class="movie-copy"><small id="modalGenre"></small><h2 id="modalTitle"></h2><div id="modalMeta" class="meta"></div><p id="modalDesc"></p><div class="actions"><a id="watchBtn" class="primary" target="_blank" rel="noopener">▷ Watch Release</a><button id="saveBtn" class="save">♡ My List</button></div><small class="notice">VIRSA does not host movie files. Watch buttons open an external release page.</small></div></div></div>
 
 <footer>
-  <div class="footer-brand"><a class="logo" href="#home"><span>V</span> VIRSA</a><p>Punjabi Cinema. One Home.</p></div>
-  <div><b>EXPLORE</b><a href="#movies">Movies</a><a href="#webseries">Web Series</a><a href="#genres">Genres</a><a href="#favorites">My List</a></div>
-  <div><b>VIRSA</b><a href="#home">About</a><a href="#home">Contact</a><a href="#home">Privacy</a></div>
-  <div><b>OUR PROMISE</b><span>Punjabi stories. One home.</span><span>Original VIRSA experience.</span></div>
-  <small class="copyright">© 2026 VIRSA. All rights reserved.</small>
+<div class="footer-brand"><a class="logo" href="#home"><span class="logo-mark"><span>V</span></span><span class="logo-word">VIRSA</span></a><p>Punjabi Cinema. One Home.</p></div>
+<div><b>EXPLORE</b><a href="#movies">Movies</a><a href="#webseries">Web Series</a><a href="#genres">Genres</a><a href="#favorites">My List</a></div>
+<div><b>VIRSA</b><a href="#home">About</a><a href="#home">Contact</a><a href="#home">Privacy</a></div>
+<div><b>OUR PROMISE</b><span>Punjabi stories. One home.</span><span>Original VIRSA experience.</span></div>
+<small class="copyright">© 2026 VIRSA. All rights reserved.</small>
 </footer>
 <script src="script.js"></script>
 </body></html>
