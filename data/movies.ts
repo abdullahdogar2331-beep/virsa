@@ -18,26 +18,28 @@ const backdrop = (id: string) => `https://images.unsplash.com/${id}?auto=format&
 export const movies: Movie[] = [
   {
     id: 'virsa-01',
-    title: 'Punjabi Classics',
+    title: 'Dulla Vaily',
     year: '2026',
-    genre: 'Classic',
-    rating: '8.7',
-    duration: '2h 08m',
+    genre: 'Action',
+    rating: '8.4',
+    duration: '2h 10m',
     poster: poster('photo-1518837695005-2083093ee35b'),
     backdrop: backdrop('photo-1518837695005-2083093ee35b'),
-    description: 'A curated place for Punjabi cinema discovery. Replace this demo entry with an official movie listing and its authorized YouTube video.',
+    description: 'Official full Punjabi movie presented on the verified Shemaroo Punjabi YouTube channel.',
     featured: true,
+    youtubeId: 'MyzCNmZvVvs',
   },
   {
     id: 'virsa-02',
-    title: 'Rang Punjab',
-    year: '2025',
+    title: 'The Journey of Punjab',
+    year: '2016',
     genre: 'Drama',
     rating: '8.3',
     duration: '2h 16m',
     poster: poster('photo-1516979187457-637abb4f9353'),
     backdrop: backdrop('photo-1516979187457-637abb4f9353'),
-    description: 'A premium placeholder title for the VIRSA catalog. Official content links can be added later.',
+    description: 'Official full Punjabi movie presented by Lokdhun Punjabi on YouTube.',
+    youtubeId: 'PAEMzGrjifw',
   },
   {
     id: 'virsa-03',
@@ -48,7 +50,7 @@ export const movies: Movie[] = [
     duration: '1h 58m',
     poster: poster('photo-1489599849927-2ee91cede3ba'),
     backdrop: backdrop('photo-1489599849927-2ee91cede3ba'),
-    description: 'Demo catalog content for the first VIRSA interface build.',
+    description: 'Demo catalog entry — replace with an authorized YouTube movie before publishing.',
   },
   {
     id: 'virsa-04',
@@ -59,7 +61,7 @@ export const movies: Movie[] = [
     duration: '2h 02m',
     poster: poster('photo-1485846234645-a62644f84728'),
     backdrop: backdrop('photo-1485846234645-a62644f84728'),
-    description: 'Demo catalog content for the first VIRSA interface build.',
+    description: 'Demo catalog entry — replace with an authorized YouTube movie before publishing.',
   },
   {
     id: 'virsa-05',
@@ -70,7 +72,7 @@ export const movies: Movie[] = [
     duration: '1h 52m',
     poster: poster('photo-1500530855697-b586d89ba3ee'),
     backdrop: backdrop('photo-1500530855697-b586d89ba3ee'),
-    description: 'Demo catalog content for the first VIRSA interface build.',
+    description: 'Demo catalog entry — replace with an authorized YouTube movie before publishing.',
   },
 ];
 
