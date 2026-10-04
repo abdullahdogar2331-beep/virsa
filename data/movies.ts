@@ -9,6 +9,7 @@ export type Movie = {
   backdrop: string;
   description: string;
   featured?: boolean;
+  youtubeId?: string;
 };
 
 const poster = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=85`;
