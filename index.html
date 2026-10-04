@@ -1,80 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="VIRSA — Punjabi Cinema. One Home. Discover Punjabi movies, classics and new stories in a premium OTT experience.">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="VIRSA — Punjabi Cinema. One Home. Discover Punjabi movies and stories in a premium OTT experience.">
 <title>VIRSA — Punjabi Cinema. One Home.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="nav" id="nav">
-  <a class="logo" href="#home" aria-label="VIRSA home">VIRSA</a>
-  <nav><a href="#home">Home</a><a href="#movies">Movies</a><a href="#genres">Genres</a><a href="#favorites">My List</a></nav>
-  <div class="nav-actions"><button id="searchOpen" class="icon-btn" aria-label="Search">⌕</button><button class="login">Sign In</button></div>
+  <a class="logo" href="#home">VIRSA</a>
+  <nav><a class="active" href="#home">⌂&nbsp; Home</a><a href="#movies">Movies</a><a href="#webseries">Web Series</a><a href="#genres">Genres⌄</a><a href="#favorites">♡ My List</a></nav>
+  <div class="nav-actions">
+    <button id="searchOpen" class="search-trigger"><span>⌕</span><span>Search for movies, actors...</span></button>
+    <button class="round-icon" aria-label="Notifications">♧</button><button class="round-icon" aria-label="Profile">♙</button>
+  </div>
 </header>
 
 <main id="home">
 <section class="hero">
   <div class="hero-image"></div><div class="hero-overlay"></div>
   <div class="hero-copy">
-    <span class="pill">VIRSA • PUNJABI ENTERTAINMENT</span>
-    <h1>Punjabi stories.<br><em>Made to stay.</em></h1>
-    <p>From unforgettable classics to fresh Punjabi stories, discover a cinematic collection built around the culture, humour and heart of Punjab.</p>
-    <div class="hero-meta"><span>HD</span><i>•</i><span>Punjabi</span><i>•</i><span>Movies</span></div>
-    <div class="hero-actions"><button class="primary" data-movie="virsa-01">▶ Watch Now</button><button class="ghost" data-scroll="#movies">＋ My Collection</button></div>
+    <div class="hero-kicker">PUNJABI CINEMA&nbsp; • &nbsp;OUR CULTURE&nbsp; • &nbsp;OUR PRIDE</div>
+    <div class="hero-logo">VIRSA</div>
+    <h1>More Than Just Movies<br><span>It's Our Heritage</span></h1>
+    <p>Discover the stories, characters and emotions that bring Punjab to life.</p>
+    <div class="hero-actions"><button class="primary" data-movie="virsa-01">▷&nbsp; Watch Now</button><button class="ghost" data-scroll="#movies">▷&nbsp; Explore</button></div>
+    <div class="slider-dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
   </div>
-  <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
 </section>
 
-<section class="trust"><span>PURE PUNJABI</span><b>•</b><span>CURATED CINEMA</span><b>•</b><span>OFFICIAL RELEASES</span><b>•</b><span>WATCH ANYWHERE</span></section>
-
 <section class="catalog" id="movies">
-  <div class="section-title"><div><small>WHAT'S HOT</small><h2>Trending Now</h2></div><button class="view" data-search>View All <b>→</b></button></div>
+  <div class="section-title"><div><span class="red-bar"></span><h2>Trending Now</h2></div><button class="view" data-search>View All →</button></div>
   <div class="rail" id="trending"></div>
-
-  <div class="section-title"><div><small>FRESH PICKS</small><h2>Latest on VIRSA</h2></div></div>
+  <div class="section-title"><div><span class="red-bar"></span><h2>Latest Additions</h2></div><button class="view" data-search>View All →</button></div>
   <div class="rail" id="latest"></div>
-
-  <div class="section-title" id="genres"><div><small>TOP OF THE LIST</small><h2>Top Rated</h2></div></div>
+  <div class="section-title" id="webseries"><div><span class="red-bar"></span><h2>Web Series</h2></div></div>
+  <div class="rail" id="webSeries"></div>
+  <div class="section-title" id="genres"><div><span class="red-bar"></span><h2>Top Rated</h2></div></div>
   <div class="rail" id="topRated"></div>
-
-  <div class="section-title"><div><small>FEEL THE STORY</small><h2>Drama</h2></div></div>
+  <div class="section-title"><div><span class="red-bar"></span><h2>Drama</h2></div></div>
   <div class="rail" id="drama"></div>
-
-  <div class="section-title"><div><small>GOOD VIBES</small><h2>Comedy</h2></div></div>
+  <div class="section-title"><div><span class="red-bar"></span><h2>Comedy</h2></div></div>
   <div class="rail" id="comedy"></div>
 </section>
 
 <section class="feature">
-  <div class="feature-copy"><small>THE VIRSA EXPERIENCE</small><h2>Where Punjab<br><em>meets cinema.</em></h2><p>A clean home for Punjabi entertainment — easy to explore, easy to discover, and focused on the stories worth watching.</p><button class="primary" data-search>Explore the Collection</button></div>
+  <div class="feature-copy"><small>THE VIRSA EXPERIENCE</small><h2>Punjab on<br><em>every screen.</em></h2><p>One cinematic home for Punjabi stories, timeless characters and the culture we grew up with.</p><button class="primary" data-search>Explore VIRSA</button></div>
 </section>
 
 <section class="favorites" id="favorites">
-  <div class="section-title"><div><small>YOUR PICKS</small><h2>My List</h2></div></div>
+  <div class="section-title"><div><span class="red-bar"></span><h2>My List</h2></div></div>
   <div class="grid" id="favoriteGrid"></div>
 </section>
 </main>
 
-<div class="search-overlay" id="searchOverlay">
-  <button class="close" id="searchClose" aria-label="Close search">×</button>
-  <div class="search-box"><small>SEARCH VIRSA</small><input id="searchInput" placeholder="Search movies, genres, years..." autocomplete="off"><div class="chips" id="chips"></div><div class="grid" id="searchResults"></div></div>
-</div>
+<div class="search-overlay" id="searchOverlay"><button class="close" id="searchClose">×</button><div class="search-box"><small>SEARCH VIRSA</small><input id="searchInput" placeholder="Search for movies, actors, genres..." autocomplete="off"><div class="chips" id="chips"></div><div class="grid" id="searchResults"></div></div></div>
 
-<div class="modal" id="movieModal">
-  <button class="close" id="modalClose" aria-label="Close">×</button>
-  <div class="movie-panel"><img id="modalPoster" alt=""><div class="movie-copy"><small id="modalGenre"></small><h2 id="modalTitle"></h2><div id="modalMeta" class="meta"></div><p id="modalDesc"></p><div class="actions"><a id="watchBtn" class="primary" target="_blank" rel="noopener">▶ Watch Release</a><button id="saveBtn" class="save">♡ My List</button></div><small class="notice">VIRSA does not host movie files. Watch buttons open external releases.</small></div></div>
-</div>
+<div class="modal" id="movieModal"><button class="close" id="modalClose">×</button><div class="movie-panel"><img id="modalPoster" alt=""><div class="movie-copy"><small id="modalGenre"></small><h2 id="modalTitle"></h2><div id="modalMeta" class="meta"></div><p id="modalDesc"></p><div class="actions"><a id="watchBtn" class="primary" target="_blank" rel="noopener">▷ Watch Release</a><button id="saveBtn" class="save">♡ My List</button></div><small class="notice">VIRSA does not host movie files. Watch buttons open external releases.</small></div></div></div>
 
-<footer>
-  <div class="footer-brand"><a class="logo" href="#home">VIRSA</a><p>Punjabi Cinema. One Home.</p></div>
-  <div><b>Explore</b><a href="#movies">Movies</a><a href="#genres">Genres</a><a href="#favorites">My List</a></div>
-  <div><b>VIRSA</b><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div>
-  <div><b>FOLLOW</b><span>Punjabi stories, one home.</span></div>
-  <small class="copyright">© 2026 VIRSA. All rights reserved.</small>
-</footer>
+<footer><div class="footer-brand"><a class="logo" href="#home">VIRSA</a><p>Punjabi Cinema. One Home.</p></div><div><b>EXPLORE</b><a href="#movies">Movies</a><a href="#webseries">Web Series</a><a href="#genres">Genres</a></div><div><b>VIRSA</b><a href="#">About</a><a href="#">Contact</a><a href="#">Privacy</a></div><div><b>OUR PROMISE</b><span>Punjabi stories. One home.</span></div><small class="copyright">© 2026 VIRSA. All rights reserved.</small></footer>
 <script src="script.js"></script>
 </body></html>
